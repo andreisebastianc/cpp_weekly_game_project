@@ -9,7 +9,12 @@ I had to also install:
 * Mesa-libGL-devel (for Could NOT find OpenGL (missing: OPENGL_opengl_LIBRARY OPENGL_glx_LIBRARY
                           OPENGL_INCLUDE_DIR))
 * libudev-devel - Development files for libudev
+* install llvm for sanitizer
 
+CMAKE Options set:
+```
+-DENABLE_SANITIZER_ADDRESS:BOOL=True -DENABLE_SANITIZER_UNDEFINED_BEHAVIOR:BOOL=True -DENABLE_CPPCHECK:BOOL=True
+```
 
 In my linux GCC is the default compiler and conan expecting clang fails with:
 ```
